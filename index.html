@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Soul of East Java</title>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,900;1,400;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="lando-header">
+        <div class="lando-logo" onclick="document.getElementById('home').scrollIntoView();">
+            SOUL OF
+            <span>EAST JAVA</span>
+        </div>
+
+        <div class="lando-nav">
+            <a href="#gallery" class="btn-yellow-action">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                    <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                    <polyline points="21 15 16 10 5 21"></polyline>
+                </svg>
+                <span>GALERI</span>
+            </a>
+            
+            <button class="btn-menu-toggle">
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <div class="menu-overlay" id="menuOverlay">
+        <div class="menu-wave-layer wave-back"></div>
+        <div class="menu-wave-layer wave-front"></div>
+
+        <div class="menu-content-wrapper">
+            <div class="menu-left-visual" id="menuVisual">
+                <div class="visual-item parallax-img" data-speed="0.05">
+                    <img src="images/remomenu1.jpg" alt="Remo">
+                </div>
+                <div class="visual-item parallax-img" data-speed="-0.08" style="z-index: 2;">
+                    <img src="images/wayangmenu1.jpg" alt="Wayang">
+                </div>
+                <div class="visual-item parallax-img" data-speed="0.06">
+                    <img src="images/reogmenu1.jpeg" alt="Reog">
+                </div>
+            </div>
+
+            <div class="menu-right-nav">
+                <div class="nav-links">
+                    <a href="#home" class="menu-link">BERANDA</a>
+                    <a href="#gallery" class="menu-link">GALERI</a>
+                    <a href="" class="menu-link">SEJARAH</a>
+                    <a href="#kontak" class="menu-link">KONTAK</a>
+                </div>
+
+                <div class="menu-footer">
+                    <p>THE SOUL OF EAST JAVA © 2026</p>
+                    <div class="socials">
+                        <a href="https://www.instagram.com/dvinvrian/">INSTAGRAM</a>
+                        <a href="https://www.youtube.com/@dvinvrian">YOUTUBE</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="batik-background">
+        <div class="fluid-layer"></div>
+        <div class="fluid-layer"></div>
+    </div>
+    
+    <div class="gold-glow" id="glow"></div>
+    <div class="cursor-follower"></div>
+
+    <section id="home">
+        <div class="intro-label">Warisan Nusantara</div>
+        <h1 class="hero-title">THE SOUL<br>OF EAST JAVA</h1>
+        <a href="#gallery" class="scroll-btn">Jelajahi<span>↓</span></a>
+    </section>
+
+    <div class="wave-separator">
+        <svg viewBox="0 0 1440 320" preserveAspectRatio="none" style="width: 100%; height: 100%;">
+            <path fill="none" stroke="rgba(255, 157, 0, 0.4)" stroke-width="2" d="M0,160L48,176C96,192,192,224,288,224C384,224,480,192,576,165.3C672,139,768,117,864,128C960,139,1056,181,1152,197.3C1248,213,1344,203,1392,197.3L1440,192">
+                <animate attributeName="d" dur="5s" repeatCount="indefinite" values="
+                 M0,160L48,176C96,192,192,224,288,224C384,224,480,192,576,165.3C672,139,768,117,864,128C960,139,1056,181,1152,197.3C1248,213,1344,203,1392,197.3L1440,192;
+                 M0,160L48,144C96,128,192,96,288,106.7C384,117,480,171,576,197.3C672,224,768,224,864,208C960,192,1056,160,1152,149.3C1248,139,1344,149,1392,154.7L1440,160;
+                 M0,160L48,176C96,192,192,224,288,224C384,224,480,192,576,165.3C672,139,768,117,864,128C960,139,1056,181,1152,197.3C1248,213,1344,203,1392,197.3L1440,192" 
+                />
+            </path>
+        </svg>
+    </div>
+
+    <section id="gallery">
+        <div class="gallery-item" onclick="document.getElementById('lando-curtain').scrollIntoView();">
+            <span class="item-label">Ponorogo</span>
+            <h1 class="hover-target">REOG PONOROGO</h1>
+        </div>
+        <div class="gallery-item" onclick="document.getElementById('wayang-curtain').scrollIntoView();">
+            <span class="item-label">Malang</span>
+            <h1 class="hover-target">WAYANG KULIT</h1>
+        </div>
+        <div class="gallery-item" onclick="document.getElementById('remo-curtain').scrollIntoView();">
+            <span class="item-label">Jombang</span>
+            <h1 class="hover-target">TARI REMO</h1>
+        </div>
+        
+        <p style="margin-top: 50px; color: #ffffff; font-size: 0.8rem; letter-spacing: 2px;">SCROLL UNTUK MELIHAT GALERI</p>
+        <div style="height: 50px; width: 1px; background: rgb(254, 254, 254); margin-top: 20px;"></div>
+    </section>
+
+    <section id="parallax-section">
+        <div class="horizontal-scroll-wrapper">
+            
+            <div class="img-wrapper slower header-wrapper-fix">
+                <div class="parallax-header" style="transform: rotate(-90deg); text-align: center;">
+                    <p>GALERI VISUAL</p>
+                    <h2>JEJAK<br>LANGKAH</h2>
+                </div>
+            </div>
+
+            <div class="img-wrapper faster">
+                <a href="#" target="_blank"><img src="images/remogal1.jpg" alt="Tari Remo"></a>
+                <div class="caption-box">
+                    <h3>Sang Penari</h3>
+                    <p>Keanggunan dalam setiap hentakan kaki Tari Remo.</p>
+                </div>
+            </div>
+
+            <div class="img-wrapper slower vertical">
+                <a href="#" target="_blank"><img src="images/remogal2.jpg" alt="Tari Remo"></a>
+                <div class="caption-box">
+                    <h3>Jombang</h3>
+                    <p>Simbol penyambutan tamu agung khas Jawa Timur.</p>
+                </div>
+            </div>
+
+            <div class="img-wrapper slower slower-down">
+                <a href="#" target="_blank"><img src="images/wayanggal1.jpg" alt="Wayang Malangan"></a>
+                <div class="caption-box">
+                    <h3>Wayang Kulit</h3>
+                    <p>Bayangan leluhur yang bercerita tentang kehidupan.</p>
+                </div>
+            </div>
+
+            <div class="img-wrapper">
+                <a href="#" target="_blank"><img src="images/wayanggal2.jpg" alt="Wayang Malangan"></a>
+                <div class="caption-box">
+                    <h3>Dalang</h3>
+                    <p>Pewaris cerita epik Mahabarata dan Ramayana.</p>
+                </div>
+            </div>
+            
+            <div class="img-wrapper faster1">
+                <a href="#" target="_blank"><img src="images/jarangal1.jpg" alt="Kuda Lumping"></a>
+                <div class="caption-box">
+                    <h3>Jaranan</h3>
+                    <p>Mistis dan magis dalam atraksi Kuda Lumping.</p>
+                </div>
+            </div>
+
+            <div class="img-wrapper slower-down">
+                <a href="#" target="_blank"><img src="images/sapipujonasligal1.jpg" alt="Karapan Sapi"></a>
+                <div class="caption-box">
+                    <h3>Karakan Sapi</h3>
+                    <p>Tradisi agraris masyarakat Madura.</p>
+                </div>
+            </div>
+
+            <div class="img-wrapper vertical">
+                <a href="#" target="_blank"><img src="images/tarigandrunggal1.jpeg" alt="Tari Gandrung"></a>
+                <div class="caption-box">
+                    <h3>Gandrung</h3>
+                    <p>Pesona magis dari ujung timur Banyuwangi.</p>
+                </div>
+            </div>
+
+            <div class="img-wrapper slower2">
+                <a href="#" target="_blank"><img src="images/bantengangal1.jpg" alt="Bantengan"></a>
+                <div class="caption-box">
+                    <h3>Bantengan</h3>
+                    <p>Seni pertunjukan bela diri dan trans.</p>
+                </div>
+            </div>
+            
+            <div class="img-wrapper slower">
+                <a href="#" target="_blank"><img src="images/reoggal1.jpg" alt="Reog Ponorogo"></a>
+                <div class="caption-box">
+                    <h3>Singa Barong</h3>
+                    <p>Kekuatan mistis Reog Ponorogo yang melegenda.</p>
+                </div>
+            </div>
+
+            <div class="img-wrapper faster1">
+                <a href="#" target="_blank"><img src="images/wayanggal3.jpg" alt="Wayang Malangan"></a>
+                <div class="caption-box">
+                    <h3>Malangan</h3>
+                    <p>Gaya khas pewayangan area Malang Raya.</p>
+                </div>
+            </div>
+
+            <div class="img-wrapper slower slower2">
+                <a href="#" target="_blank"><img src="images/reoggal2.jpg" alt="Reog Ponorogo"></a>
+                <div class="caption-box">
+                    <h3>Warok</h3>
+                    <p>Penjaga tradisi dan kearifan lokal Ponorogo.</p>
+                </div>
+            </div>
+            
+            <div class="img-wrapper last">
+                <a href="#" target="_blank"><img src="images/reoggal3.jpg" alt="Reog Ponorogo"></a>
+                <div class="caption-box">
+                    <h3>Klono Sewandono</h3>
+                    <p>Raja gagah berani dalam legenda Reog.</p>
+                </div>
+            </div>
+
+        </div>
+        <div class="scroll-helper">SCROLL DOWN TO MOVE SIDEWAYS</div>
+    </section>
+    
+    <section id="chess-section">
+        <div class="chess-container">
+            <div class="chess-board">
+                <div class="tile"></div><div class="tile"></div><div class="tile"></div><div class="tile"></div><div class="tile"></div>
+                <div class="tile"></div><div class="tile"></div><div class="tile"></div><div class="tile"></div><div class="tile"></div>
+                <div class="tile"></div><div class="tile"></div><div class="tile center-tile"></div><div class="tile"></div><div class="tile"></div>
+                <div class="tile"></div><div class="tile"></div><div class="tile"></div><div class="tile"></div><div class="tile"></div>
+                <div class="tile"></div><div class="tile"></div><div class="tile"></div><div class="tile"></div><div class="tile"></div>
+            </div>
+
+            <div class="gunungan-obj">
+                <svg viewBox="0 0 100 150" fill="none">
+                    <path d="M50 5L5 80L20 145H80L95 80L50 5Z" fill="#1a0f00" stroke="#ff9d00" stroke-width="1.5"/>
+                    <path d="M50 25L25 75H75L50 25Z" fill="#ff9d00"/>
+                    <circle cx="50" cy="110" r="12" fill="#ff9d00"/>
+                    <path d="M50 100L40 120H60L50 100Z" fill="#3e2b14"/>
+                </svg>
+                <div class="impact-glow"></div>
+            </div>
+            
+            <div class="text-reveal">
+                <h2>THE NEXT CHAPTER</h2>
+            </div>
+        </div>
+    </section>
+
+    <section id="lando-curtain">
+        <div class="curtain-image-wrapper">
+            <img src="images/curtainreog.jpg" alt="Curtain" class="curtain-img">
+        </div>
+    </section>
+
+    <section id="reog-history">
+        
+        <div class="history-bg-lines">
+            <div class="wave-container">
+                <svg class="wave-svg wave-1" viewBox="0 0 1440 320" preserveAspectRatio="none">
+                    <path fill="none" d="M0,160 C320,300, 420,100, 740,160 C1060,220, 1120,100, 1440,160 V320 H0 Z" />
+                </svg>
+                
+                <svg class="wave-svg wave-2" viewBox="0 0 1440 320" preserveAspectRatio="none">
+                    <path fill="none" d="M0,100 C320,0, 420,200, 740,100 C1060,0, 1120,200, 1440,100 V320 H0 Z" />
+                </svg>
+                
+                <svg class="wave-svg wave-3" viewBox="0 0 1440 320" preserveAspectRatio="none">
+                    <path fill="none" d="M0,200 C320,100, 420,300, 740,200 C1060,100, 1120,300, 1440,200 V320 H0 Z" />
+                </svg>
+            </div>
+        </div>
+
+        <div class="history-content centered-layout">
+            <span class="chapter-mark reog-mark">BAB I: MUNCULNYA MAKHLUK WARISAN DUNIA</span>
+            <h1 class="history-hero-title" data-text="REOG">REOG<br>PONOROGO</h1>
+            
+            <div class="gold-separator-line"></div>
+            
+            <div class="text-container">
+                <p class="highlight-p">
+                    Reog Ponorogo merupakan kesenian tradisional asli Ponorogo yang berfungsi sebagai pementasan teater rakyat sekaligus <mark class="text-highlight">simbol perlawanan sejarah</mark>. Komponen utama adalah Dadak Merak, topeng singa (Singo Barong) dengan bulu merak setinggi 2 meter.
+                </p>
+
+                <p class="highlight-p">
+                    Secara teknis, atraksi ini sangat mengagumkan karena sang pembarong memikul seluruh beban berat tersebut <mark class="text-highlight">hanya dengan kekuatan otot leher dan gigi</mark>. Irama mistis selompret membalut gerakan enerjik para penari.
+                </p>
+
+                <p class="highlight-p">
+                    Secara filosofis, Reog bukan sekadar tarian, melainkan <mark class="text-highlight">narasi visual dari legenda Kerajaan Bantarangin</mark> dan kritik sosial masa lampau. Membangun alur cerita kompleks tentang kepahlawanan dan satir.
+                </p>
+
+                <p class="highlight-p">
+                    Hingga kini, Reog Ponorogo tetap menjadi identitas budaya terkuat Indonesia yang sedang diperjuangkan sebagai <mark class="text-highlight">Warisan Budaya Takbenda oleh UNESCO</mark>, menjaga nyala api tradisi.
+                </p>
+            </div>
+            
+            <div class="history-footer-ornament">
+                <span>✦</span> THE SOUL OF EAST JAVA <span>✦</span>
+            </div>
+        </div>
+    </section>
+
+    <section id="wayang-curtain">
+        <div class="curtain-image-wrapper">
+            <img src="images/curtainwayangan.jpg" alt="Wayang Curtain" class="curtain-img">
+        </div>
+    </section>
+
+    <section id="wayang-history">
+        
+        <div class="history-bg-lines">
+            <div class="wave-container">
+                <svg class="wave-svg wave-1" viewBox="0 0 1440 320" preserveAspectRatio="none">
+                    <path fill="none" d="M0,160 C320,300, 420,100, 740,160 C1060,220, 1120,100, 1440,160 V320 H0 Z" />
+                </svg>
+                <svg class="wave-svg wave-2" viewBox="0 0 1440 320" preserveAspectRatio="none">
+                    <path fill="none" d="M0,100 C320,0, 420,200, 740,100 C1060,0, 1120,200, 1440,100 V320 H0 Z" />
+                </svg>
+                <svg class="wave-svg wave-3" viewBox="0 0 1440 320" preserveAspectRatio="none">
+                    <path fill="none" d="M0,200 C320,100, 420,300, 740,200 C1060,100, 1120,300, 1440,200 V320 H0 Z" />
+                </svg>
+            </div>
+        </div>
+
+        <div class="history-content centered-layout">
+            <span class="chapter-mark wayang-mark">BAB II: FILOSOFI DAN ROMANTISME DALAM KULIT</span>
+            <h1 class="history-hero-title wayang-title" data-text="TOPENG MALANGAN">TOPENG<br>MALANGAN</h1>
+            
+            <div class="gold-separator-line"></div>
+            
+            <div class="text-container">
+                <p class="highlight-p">
+                    Wayang Topeng Malang merupakan kesenian drama tari khas Malang, Jawa Timur, yang menjadi salah satu bentuk <mark class="text-highlight">evolusi teater rakyat tertua di nusantara</mark>. Berbeda dengan wayang kulit, pertunjukan ini menggunakan aktor manusia yang mengenakan topeng kayu (kedok) dengan detail ukiran jamang (mahkota) yang rumit.
+                </p>
+
+                <p class="highlight-p">
+                    Setiap warna topeng merepresentasikan karakter yang tegas: merah untuk kemarahan, putih untuk kesucian, dan hijau untuk kebijaksanaan. Pertunjukan dipandu oleh seorang Dalang yang tidak hanya bertindak sebagai narator, tetapi juga <mark class="text-highlight">pengatur laku para penari dalam pakem gerak dinamis</mark>.
+                </p>
+
+                <p class="highlight-p">
+                    Secara naratif, Wayang Topeng Malang hampir secara eksklusif membawakan <mark class="text-highlight">Siklus Panji</mark>, kisah romansa dan kepahlawanan antara Raden Panji Inu Kertapati dan Dewi Sekartaji. Ini bukan sekadar hiburan, melainkan ritual yang sarat nilai moral dan spiritual sejak zaman Kerajaan Singhasari.
+                </p>
+
+                <p class="highlight-p">
+                    Keberadaan sentra budaya seperti di Desa Karangpandan menjadi bukti nyata bahwa kesenian ini tetap lestari sebagai <mark class="text-highlight">identitas kolektif masyarakat Malang</mark> yang menjunjung tinggi keharmonisan antara seni visual, gerak, dan sastra lisan.
+                </p>
+            </div>
+            
+            <div class="history-footer-ornament">
+                <span>✦</span> THE SOUL OF EAST JAVA <span>✦</span>
+            </div>
+        </div>
+    </section>
+
+    <section id="remo-curtain">
+        <div class="curtain-image-wrapper">
+            <img src="images/remocurtain.jpg" alt="Tari Remo Curtain" class="curtain-img">
+        </div>
+    </section>
+
+    <section id="remo-history">
+        
+        <div class="history-bg-lines">
+            <div class="wave-container">
+                <svg class="wave-svg wave-1" viewBox="0 0 1440 320" preserveAspectRatio="none">
+                    <path fill="none" d="M0,160 C320,300, 420,100, 740,160 C1060,220, 1120,100, 1440,160 V320 H0 Z" />
+                </svg>
+                <svg class="wave-svg wave-2" viewBox="0 0 1440 320" preserveAspectRatio="none">
+                    <path fill="none" d="M0,100 C320,0, 420,200, 740,100 C1060,0, 1120,200, 1440,100 V320 H0 Z" />
+                </svg>
+                <svg class="wave-svg wave-3" viewBox="0 0 1440 320" preserveAspectRatio="none">
+                    <path fill="none" d="M0,200 C320,100, 420,300, 740,200 C1060,100, 1120,300, 1440,200 V320 H0 Z" />
+                </svg>
+            </div>
+        </div>
+
+        <div class="history-content centered-layout">
+            <span class="chapter-mark remo-mark">BAB III: SAMBUTAN HANGAT SANG PRAJURIT</span>
+            <h1 class="history-hero-title remo-title" data-text="TARI REMO">TARI<br>REMO</h1>
+            
+            <div class="gold-separator-line"></div>
+            
+            <div class="text-container">
+                <p class="highlight-p">
+                    Tari Remo merupakan salah satu tarian selamat datang paling ikonik dari Jawa Timur yang lahir di Jombang sebelum berkembang pesat di Surabaya. Karakteristik utama yang membedakannya adalah <mark class="text-highlight">gerakan kaki yang sangat dinamis dan menghentak</mark> (gedrug), yang menjadi jiwa dari tarian ini.
+                </p>
+
+                <p class="highlight-p">
+                    Keunikan ini diperkuat dengan penggunaan <i>gongseng</i>, kumpulan lonceng kecil di pergelangan kaki. Setiap hentakan menghasilkan <mark class="text-highlight">bunyi gemerincing yang selaras dengan irama gamelan</mark>, menciptakan harmoni musik internal yang mempertegas ketegasan gerak para penari.
+                </p>
+
+                <p class="highlight-p">
+                    Secara filosofis, Tari Remo adalah <mark class="text-highlight">representasi dari karakter masyarakat Jawa Timur yang lugas, berani, dan terbuka</mark>. Mulai dari keris di pinggang hingga tatapan mata yang tajam, tarian ini bukan sekadar hiburan, melainkan pesan tentang kegagahan prajurit di medan laga.
+                </p>
+
+                <p class="highlight-p">
+                    Bagi kebudayaan nusantara, Tari Remo tetap relevan sebagai <mark class="text-highlight">simbol sambutan hangat bagi para tamu</mark> sekaligus pengingat akan semangat patriotisme yang tak pernah padam, baik ditarikan dalam gaya Sawunggaling, Jombangan, maupun Malangan.
+                </p>
+            </div>
+            
+            <div class="history-footer-ornament">
+                <span>✦</span> THE SOUL OF EAST JAVA <span>✦</span>
+            </div>
+        </div>
+    </section>
+    
+
+    <script src="script.js"></script>
+
+    <footer id="kontak" class="final-footer">
+    <div class="waves-container-final">
+        <svg class="waves-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+        viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+            <defs>
+                <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+            </defs>
+            <g class="parallax-group">
+                <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(212, 175, 55, 0.2)" />
+                <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(212, 175, 55, 0.4)" />
+                <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(212, 175, 55, 0.8)" />
+            </g>
+        </svg>
+    </div>
+    
+    <div class="footer-content-final">
+        <div class="footer-grid-final">
+            
+            <div class="f-col brand-col">
+                <h3 class="f-brand">The Soul of<br>East Java.</h3>
+                <p class="f-desc">
+                    Eksplorasi digital warisan budaya Jawa Timur melalui harmoni teknologi dan seni tradisional.
+                </p>
+            </div>
+
+            <div class="f-col contact-col">
+                <h4 class="f-heading">Hubungi Saya</h4>
+                <ul class="f-links">
+                    <li><a href="https://www.instagram.com/dvinvrian/" target="_blank">Instagram</a></li>
+                    <li><a href="https://www.youtube.com/@dvinvrian" target="_blank">YouTube Channel</a></li>
+                    <li><a href="mailto:nightcoredavin@gmail.com">Email Me</a></li>
+                </ul>
+            </div>
+
+            <div class="f-col credit-col">
+                <h4 class="f-heading">Portofolio</h4>
+                <p class="f-credit-text">
+                    Dikembangkan dengan dedikasi penuh di Jawa Timur, Indonesia.
+                </p>
+                <div class="student-badge">
+                    Davin Varian &copy; 2026. <br>XII-2 Student Project.
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+</body>
+</html>
