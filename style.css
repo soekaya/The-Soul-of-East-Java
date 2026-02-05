@@ -96,7 +96,7 @@ body {
 }
 .fluid-layer {
     position: absolute; top: -50%; left: -50%; width: 200%; height: 200%;
-    background-image: url("images/batik.jpg"); 
+    background-image: url("batik.jpg"); 
     background-size: 800px; background-repeat: repeat;
     filter: contrast(1.2) brightness(0.7) sepia(0.6) hue-rotate(-20deg);
     animation: flow 60s linear infinite, subtleWave 20s ease-in-out infinite alternate;
@@ -814,4 +814,5 @@ section {
     padding-top: 1.5rem;
     color: #888;
     line-height: 1.6;
+
 }
